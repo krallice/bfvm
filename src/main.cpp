@@ -15,7 +15,6 @@ class BfVirtualMachine {
       std::string program = "";
 
   public:
-    BfVirtualMachine() {}
     BfVirtualMachine(const std::string s) {
       program = s;
     } 
