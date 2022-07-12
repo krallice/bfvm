@@ -2,7 +2,7 @@
 
 Toy Brainfuck virtual machine.
 
-Plently of room for performance improvement's I'm sure.
+Plently of room for performance improvements I'm sure.
 
 ~~~
 # make clean && make
