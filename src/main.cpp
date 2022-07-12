@@ -12,9 +12,10 @@ class BfVirtualMachine {
       std::array<uint8_t, 30000> memory {};
 
       uint16_t instructionpointer = 0;
-      std::string program = ">++++++++[<+++++++++>-]<.>++++[<+++++++>-]<+.+++++++..+++.>>++++++[<+++++++>-]<++.------------.>++++++[<+++++++++>-]<+.<.+++.------.--------.>>>++++[<++++++++>-]<+.";
+      std::string program = "";
 
   public:
+    BfVirtualMachine() {}
     BfVirtualMachine(const std::string s) {
       program = s;
     } 
@@ -111,9 +112,13 @@ std::string ReadFileIntoString(const std::string& path) {
 
 int main(int argc, char **argv) {
 
-  std::string path(argv[1]);
-  std::string program = ReadFileIntoString(path);
-  std::cout << program << std::endl;
+  std::string program;
+  try {
+    program = ReadFileIntoString(argv[1]);
+  } catch (...) {
+    program = ">++++++++[<+++++++++>-]<.>++++[<+++++++>-]<+.+++++++..+++.>>++++++[<+++++++>-]<++.------------.>++++++[<+++++++++>-]<+.<.+++.------.--------.>>>++++[<++++++++>-]<+.";
+  }
+  
   BfVirtualMachine bfvm(program);
   bfvm.MainLoop();
 

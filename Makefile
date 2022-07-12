@@ -8,7 +8,7 @@ SRCDIR=src
 BINDIR=bin
 OBJDIR=obj
 
-TARGET=main
+TARGET=bfvm
 
 SOURCES  := $(wildcard $(SRCDIR)/*.cpp)
 INCLUDES := $(wildcard $(SRCDIR)/*.h)
