@@ -15,7 +15,7 @@ class BfVirtualMachine {
       std::string program = "";
 
   public:
-    BfVirtualMachine(const std::string s) {
+    BfVirtualMachine(const std::string& s) {
       program = s;
     } 
     void MainLoop() {
