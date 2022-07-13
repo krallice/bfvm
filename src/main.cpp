@@ -15,8 +15,7 @@ class BfVirtualMachine {
       std::string program = "";
 
   public:
-    BfVirtualMachine() {}
-    BfVirtualMachine(const std::string s) {
+    BfVirtualMachine(const std::string& s) {
       program = s;
     } 
     void MainLoop() {
@@ -110,7 +109,7 @@ std::string ReadFileIntoString(const std::string& path) {
     return returnstring;
 }
 
-int main(int argc, char **argv) {
+int main(int argc, char** argv) {
 
   std::string program;
   try {
