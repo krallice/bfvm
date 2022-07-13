@@ -88,6 +88,9 @@ class BfVirtualMachine {
               instructionpointer++;
             }
             break;
+          default:
+            instructionpointer++;
+            break;
         }
       }
 
@@ -104,9 +107,7 @@ std::string ReadFileIntoString(const std::string& path) {
         exit(EXIT_FAILURE);
     }
     ss << input_file.rdbuf();
-    std::string returnstring = ss.str();
-    returnstring.pop_back();
-    return returnstring;
+    return ss.str();
 }
 
 int main(int argc, char** argv) {
