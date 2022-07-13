@@ -109,7 +109,7 @@ std::string ReadFileIntoString(const std::string& path) {
     return returnstring;
 }
 
-int main(int argc, char **argv) {
+int main(int argc, char** argv) {
 
   std::string program;
   try {
